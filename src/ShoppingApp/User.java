@@ -27,9 +27,12 @@ public class User {
     private double shippingCost;
     private UserType userType;
 
-    public User(String name, String address) {
+    public User(String name, String address, Cart cart, double shippingCost, UserType userType) {
         this.name = name;
         this.address = address;
+        this.cart = cart;
+        this.shippingCost = 0.0;
+        this.userType = userType;
     }
 
     public String getName() {
@@ -72,12 +75,12 @@ public class User {
         this.userType = userType;
     }
 
-    public void addToCart(Product product) {  // check here
+    public void addToCart(Product product) {
         this.cart.addProduct(product);
         this.cart.setTotal(product.getPrice());
     }
 
-    public void removeFromCart(Product product) {   // check here
+    public void removeFromCart(Product product) {
         this.cart.removeProduct(product);
         this.cart.setTotal(-product.getPrice());
     }

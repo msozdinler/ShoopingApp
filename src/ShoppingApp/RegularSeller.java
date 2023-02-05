@@ -14,11 +14,12 @@ public class RegularSeller extends Seller {
      * set balance to productPrice-productPrice*feeFromPerSale
      * and reduce product stock by 1
      */
-    public RegularSeller(String name, String address) {
-        super(name, address);
+
+
+    public RegularSeller(String name, String address, Cart cart, double shippingCost, UserType userType) {
+        super(name, address, cart, shippingCost, userType);
         this.setFeeFromPerSale(0.10);
         this.setUserType(UserType.REGULAR);
-
     }
 
     @Override

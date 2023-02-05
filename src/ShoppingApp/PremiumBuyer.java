@@ -3,6 +3,8 @@ package ShoppingApp;
 public class PremiumBuyer extends Buyer {
 
 
+
+
     /**
      * This class inherits from Buyer class. It has no additional variables.
      * <p>
@@ -14,10 +16,10 @@ public class PremiumBuyer extends Buyer {
      * Implement calculateShippingCost method. return 0.
      */
 
-    public PremiumBuyer(String name, String address) {
-        super(name, address);
-        this.setShippingCost(calculateShippingCost());
+    public PremiumBuyer(String name, String address, Cart cart, double shippingCost, UserType userType) {
+        super(name, address, cart, shippingCost, userType);
     }
+
 
     @Override
     public void checkOut(PaymentMethod paymentMethod) {
@@ -25,9 +27,11 @@ public class PremiumBuyer extends Buyer {
     }
 
     @Override
-    public double calculateShippingCost() {
+    public double calculateShippingCost(PaymentMethod paymentMethod) {
         return 0;
     }
+
+
 
 
 }
