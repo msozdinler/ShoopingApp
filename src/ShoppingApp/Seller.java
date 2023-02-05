@@ -24,6 +24,8 @@ public abstract class Seller extends User {
 
     public Seller(String name, String address, Cart cart, double shippingCost, UserType userType) {
         super(name, address, cart, shippingCost, userType);
+        this.balance = 0;
+        this.products = new ArrayList<>();
     }
 
 
@@ -56,6 +58,8 @@ public abstract class Seller extends User {
         this.products.add(product);
     }
 
-    public abstract void sellProduct(Product product);
+    public abstract void sellProduct(Product product); // check here
+
+
 
 }
