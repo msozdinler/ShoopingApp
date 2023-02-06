@@ -2,7 +2,7 @@ package ShoppingApp;
 
 public class RegularBuyer extends Buyer {
     public RegularBuyer(String name, String address, Cart cart, double shippingCost, UserType userType) {
-        super(name, address, cart, shippingCost, userType);
+        super(name, address);
     }
 
 

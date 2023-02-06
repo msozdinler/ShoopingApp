@@ -27,12 +27,9 @@ public class User {
     private double shippingCost;
     private UserType userType;
 
-    public User(String name, String address, Cart cart, double shippingCost, UserType userType) {
+    public User(String name, String address) {
         this.name = name;
         this.address = address;
-        this.cart = cart;
-        this.shippingCost = 0.0;
-        this.userType = userType;
     }
 
     public String getName() {
