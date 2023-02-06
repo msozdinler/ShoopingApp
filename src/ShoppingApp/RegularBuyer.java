@@ -19,6 +19,9 @@ public class RegularBuyer extends Buyer {
         for (Product product : getCart().getCartProducts()) {
             sellProduct(product);
         }
+       /** double shipping = calculateShippingCost(paymentMethod); */  /**  ->  not sure this part */
+        // double total = getCart().getTotal() + shipping;
+
         if (paymentMethod == PaymentMethod.CREDITCARD) {
             System.out.println("$" + getCart().getTotal() + getShippingCost() + "has been deducted from your card");
 
