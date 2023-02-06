@@ -13,9 +13,12 @@ public abstract class Buyer extends User{
      * Create abstract double calculateShippingCost method with PaymentMethod parameter
      * */
 
-    public Buyer(String name, String address, Cart cart, double shippingCost, UserType userType) {
-        super(name, address, cart, shippingCost, userType);
+    public Buyer(String name, String address) {
+        super(name, address);
     }
+
+
+
 
 
     public abstract void checkOut(PaymentMethod paymentMethod);

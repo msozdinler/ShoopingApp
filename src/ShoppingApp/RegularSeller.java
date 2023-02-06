@@ -2,6 +2,12 @@ package ShoppingApp;
 
 public class RegularSeller extends Seller {
 
+    public RegularSeller(String name, String address, Cart cart, double shippingCost, UserType userType) {
+        super(name, address);
+        this.setFeeFromPerSale(0.10);
+        this.setUserType(UserType.REGULAR);
+    }
+
 
 
     /**
@@ -16,11 +22,9 @@ public class RegularSeller extends Seller {
      */
 
 
-    public RegularSeller(String name, String address, Cart cart, double shippingCost, UserType userType) {
-        super(name, address, cart, shippingCost, userType);
-        this.setFeeFromPerSale(0.10);
-        this.setUserType(UserType.REGULAR);
-    }
+
+
+
 
     @Override
     public void sellProduct(Product product) {
