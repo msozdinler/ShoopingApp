@@ -21,7 +21,7 @@ public class Cart {
     private List<Product> cartProducts;
 
     public Cart() {
-        this.total=0;
+        this.setTotal(0.0);
         this.cartProducts = new ArrayList<>();
     }
 

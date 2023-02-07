@@ -1,6 +1,12 @@
 package ShoppingApp;
 
-public abstract class Buyer extends User{
+public abstract class Buyer extends User {
+
+
+    public Buyer(String name, String address) {
+        super(name, address);
+    }
+
 
 
 
@@ -13,9 +19,7 @@ public abstract class Buyer extends User{
      * Create abstract double calculateShippingCost method with PaymentMethod parameter
      * */
 
-    public Buyer(String name, String address) {
-        super(name, address);
-    }
+
 
 
 

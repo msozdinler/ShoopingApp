@@ -1,37 +1,41 @@
 package ShoppingApp;
 
 public class RegularBuyer extends Buyer {
-    public RegularBuyer(String name, String address, Cart cart, double shippingCost, UserType userType) {
+    public RegularBuyer(String name, String address) {
         super(name, address);
     }
-
 
     @Override
     public double calculateShippingCost(PaymentMethod paymentMethod) {
         if (getCart().getTotal() < 50) {
             return getCart().getTotal() * 0.10;
+        } else {
+            return 0;
         }
-        return 0;
     }
 
     @Override
     public void checkOut(PaymentMethod paymentMethod) {
-        for (Product product : getCart().getCartProducts()) {
-            sellProduct(product);
-        }
-       /** double shipping = calculateShippingCost(paymentMethod); */  /**  ->  not sure this part */
-        // double total = getCart().getTotal() + shipping;
+       // for (Product product : getCart().getCartProducts()){
+           // sellProduct(product);
+    //}
+
+    //  double total = calculateShippingCost(paymentMethod);   /**  ->  not sure this part */
+         double total = getCart().getTotal() + calculateShippingCost(paymentMethod);
 
         if (paymentMethod == PaymentMethod.CREDITCARD) {
             System.out.println("$" + getCart().getTotal() + getShippingCost() + "has been deducted from your card");
 
+
         } else if (paymentMethod == PaymentMethod.CASHonDELIVERY) {
             System.out.println("The amount you must pay on delivery is $" + getCart().getTotal() + getShippingCost());
         }
-    }
+    }}
 
 
-}
+
+
+
 
 
 /**

@@ -29,6 +29,9 @@ public abstract class Seller extends User {
     }
 
 
+
+
+
     public List<Product> getProducts() {
         return products;
     }
@@ -58,7 +61,7 @@ public abstract class Seller extends User {
         this.products.add(product);
     }
 
-    public abstract void sellProduct(Product product);
+    public abstract void sellProduct (Product product);
 
 
 

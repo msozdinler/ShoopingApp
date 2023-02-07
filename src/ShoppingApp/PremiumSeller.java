@@ -1,11 +1,13 @@
 package ShoppingApp;
 
 public class PremiumSeller extends Seller{
-    public PremiumSeller(String name, String address, Cart cart, double shippingCost, UserType userType) {
+    public PremiumSeller(String name, String address) {
         super(name, address);
         this.setFeeFromPerSale(0.5);
         this.setUserType(UserType.PREMIUM);
     }
+
+
 
     @Override
     public void sellProduct(Product product) {
